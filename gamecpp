@@ -1,0 +1,57 @@
+#include "Game1.h"
+
+//Private functions
+void Game1::initVariables()
+{
+	this->window = nullptr;
+
+}
+
+void Game1::initWindow()
+{
+	this->videoMode.height - 600;
+	this->videoMode.width = 800;
+	this->window = new sf::RenderWindow(this->videoMode, "Maze runner", sf::Style::Titlebar | sf::Style::Close;
+}
+
+//Constructors / Destructors
+Game1::Game1();
+{
+	this->initVariables();
+	this->initWindow();
+
+}
+
+Game1::Game1();
+{
+	delete this->window;
+}
+
+const bool Game1::getWindowIsOpen() const
+{
+	return this->window->isOpen();
+}
+
+//Functions
+void Game1::update()
+{
+	//Event polling
+	while (window.pollEvent(ev))
+	{
+		switch (ev.type)
+		{
+		case sf::Event::Closed:
+			window.close();
+			break;
+		case sf::Event::KeyPressed:
+			if (ev.key.code == sf::Keyboard::Escape)
+				window.close();
+			break;
+		}
+	}
+}
+
+void Game1::render()
+{
+
+}
